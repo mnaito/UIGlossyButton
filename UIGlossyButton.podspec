@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.platform      = :ios
   s.source        = { :git => 'https://github.com/mits430/UIGlossyButton.git', :tag => 'v0.0.7' }
   ## s.preferred_dependency = 'Core'
-mits430
+
   s.frameworks    = 'UIKit', 'QuartzCore'
 
   # core files: UIGlossyButton.*. If you don't need layer effect, you can include
