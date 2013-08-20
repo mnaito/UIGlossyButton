@@ -53,6 +53,7 @@ typedef enum _UIGlossyButtonExtraShadingType {
 @interface UIGlossyButton : UIButton
 
 @property (nonatomic, strong) UIColor *tintColor UI_APPEARANCE_SELECTOR;       // this will override UIButton tintColor after iOS 5.0
+@property (nonatomic, strong) UIColor *highlightBGColor UI_APPEARANCE_SELECTOR;       // color for a custom higlighted button color.
 @property (nonatomic, strong) UIColor *disabledColor UI_APPEARANCE_SELECTOR;   // color when disabled, can be nil for lightgray color when disabled
 @property (nonatomic, assign) CGFloat buttonCornerRadius UI_APPEARANCE_SELECTOR;	// outer button border
 @property (nonatomic, assign) UIEdgeInsets buttonInsets UI_APPEARANCE_SELECTOR;     // inset of the button face, default 0.0

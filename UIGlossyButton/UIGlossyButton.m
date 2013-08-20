@@ -67,6 +67,7 @@ static void *highlightedObserverContext = &highlightedObserverContext;
 @implementation UIGlossyButton
 
 @synthesize tintColor = _tintColor;
+@synthesize highlightBGColor = _highlightBGColor;
 
 #pragma lifecycle
 
@@ -412,8 +413,13 @@ static void *highlightedObserverContext = &highlightedObserverContext;
 	UIRectFillUsingBlendMode(rect, kCGBlendModeOverlay);
 	
 	if (isSelected) {
-		[[UIColor lightGrayColor] set];
-		UIRectFillUsingBlendMode(rect, kCGBlendModeMultiply);
+		if (_highlightBGColor) {
+			[_highlightBGColor set];
+			UIRectFillUsingBlendMode(rect, kCGBlendModeNormal);
+		} else {
+			[[UIColor lightGrayColor] set];
+			UIRectFillUsingBlendMode(rect, kCGBlendModeMultiply);
+		}
 	}
 }
 
